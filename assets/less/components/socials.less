@@ -1,0 +1,25 @@
+.socials {
+    ul {
+        &:extend(.ul-unstyled);
+        display: flex;
+        li {
+            a {
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 25px;
+                height: 25px;
+                background: #fff;
+                border-radius: 50%;
+                color: @accent;
+                margin-right: 5px;
+                &:hover {
+                    border: 1px solid #fff;
+                    background: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }    
+}

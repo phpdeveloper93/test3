@@ -1,0 +1,23 @@
+//Forms, dialogs, buttons, etc
+//===========================//
+
+//BUTTONS
+.btn-color(@c: #fff, @bg-c: @accent, @fontz: 0.833em){
+    display: inline-block;
+    padding: 0.833em 2.333em;
+    background: @bg-c;
+    font-size: @fontz;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 400;
+    color: @c;
+    box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.75),
+            inset 0px 0px 5px 2px rgba(255, 255, 255, 0.36);
+    border-radius: 2px;
+    &:hover {
+        background: lighten(@accent, 10%);
+    }
+}
+.btn-color-red {
+    .btn-color();
+}

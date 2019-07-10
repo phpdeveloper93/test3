@@ -1,0 +1,180 @@
+.slide-text {
+    font-weight: 400;
+	font-size: 1.111em; //20px
+    color: @font-light;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.current-number {
+    display: block;
+    margin: 17px 0 26px;    
+    font-weight: 100;
+	font-size: 3.333em; //60px
+    color: #ccc;
+}
+.slide-item {
+    height: 260px;
+    overflow: hidden;
+}
+.bottom-slider.slick-slider{
+    margin-bottom: 60px;
+}
+.custom-dots {
+    &:extend(.ul-unstyled);
+    vertical-align: middle;
+    li {
+        display: inline-block;         
+        width: 8px;
+        height: 8px;
+        margin-right: 7px;
+        &:before {            
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid grey;            
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        button {
+            display: none;
+        }
+        &.slick-active {
+            position: relative;
+            margin-bottom: 1px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 10px;
+                height: 10px;
+                background: @accent;
+                border: 3px solid grey;            
+                cursor: pointer;
+                border-radius: 50%;
+            }            
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                border: 1px solid @accent;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .bottom-slide-item {
+        display: flex!important;
+        align-items: center;
+        padding: 15px 0;
+        span, p {
+            padding-bottom: 0!important;
+            margin: 0;
+        }
+        p {
+            margin-left: 15px;
+        }
+    }
+    .slick-slider {
+        margin: 0!important;
+    }
+    .custom-dots {
+        text-align: center;
+    }
+}
+
+//---------  Slider on section why-us -----------
+.why-us {
+    .controls {
+        text-align: center;
+        margin-bottom: 65px;
+    }
+    .slide {
+        h3 {
+            font-weight: 400;
+            font-size: 1.389em; //25px
+            color: @accent;
+            margin-bottom: 26px;
+        }        
+    }
+}
+//----------- Slider in the team section ----------
+.carousel-team {
+	margin: 0 5%;
+    overflow: hidden;
+}
+.slide-item {
+	padding: 0 5px;
+    text-align: left;
+}
+.photo {
+    overflow: hidden;    
+    width: 249px;
+    margin: 0 auto;
+}
+.arrows {	
+    margin-top: -50px;
+    position: relative;
+}
+.prev-arrow, .next-arrow {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    i {
+        font-weight: 600;
+        font-size: 18px;
+        color: @accent;
+    }
+}
+.prev-arrow {
+    left: 0;
+}
+.next-arrow {
+    right: 0;
+}
+.name {
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: 0.833em;//15px
+    color: @font-light;
+    padding: 24px 10px 9px;
+}
+.language {
+	font-weight: 300;
+    padding: 0 10px;
+}
+@media(max-width:768px){
+    .slide-item {
+        .photo {
+            margin: 0 auto;
+            width: 245px;
+        }
+        h4, p {
+            text-align: center;
+        }
+    }    
+}
+@media(max-width:576px){
+    .slide-item {
+        .photo {
+            margin: 0 auto;
+            width: 245px;
+        }
+        h4, p {
+            font-size: 0.8em;
+            padding: 0 20px;
+        }
+    }    
+}

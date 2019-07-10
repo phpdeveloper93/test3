@@ -1,0 +1,94 @@
+.main-nav {
+	padding: 16px 0;
+}
+.logo {
+	display: none;
+}
+.horizontal-nav {
+	&:extend(.ul-unstyled);
+    display: flex;
+    justify-content: flex-end;
+    li {
+        a {
+            display: block;
+            padding: 0 30px;  
+            font-size: 0.833em;//15px
+            font-weight: 400;
+            color: @font-light;
+            &:hover, &.active {
+                color: @accent;
+            }
+        }
+        &:first-child {
+            a {
+                padding-left: 0;
+            }
+        }
+        &:last-child {
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+}
+.main-nav-trigger {
+	font-size: 25px;
+    color: #ccc;    
+    line-height: 1;
+    display: none;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    &:hover{
+        color: @accent;
+    }
+}
+@media(max-width:992px){
+    .main-nav-trigger {
+	    display: block;
+    }
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: block;
+    }
+    .main-nav {
+	    position: relative;
+    }  
+    .main-nav .horizontal-nav {
+	    position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;        
+        width: 100%; 
+        z-index: 10;
+        li {
+            width: 100%;
+            display: block;
+            margin-left: 0;
+            text-align: center;
+            border-bottom: 1px solid lighten(@accent, 40%);
+            background: #fff;
+            &:first-child {
+                a {
+                    padding-left: 30px;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+                a {
+                    padding-right: 30px;
+                }
+            }
+        }
+        a {
+            display: inline-block;
+            padding: 20px 30px;            
+            &.active {
+                border-color: transparent;
+            }
+        }
+    }
+}//media 992px
