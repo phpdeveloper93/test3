@@ -4491,9 +4491,15 @@ h3.f-head {
     font-weight: 300;
     color: #cb0e16;
   }
+  .order-form p {
+    font-size: 12px!important;
+    line-height: 1;
+  }
   .btn-submit {
+    padding: 5px 5px;
     font-size: 0.667em;
     margin-top: 19px;
+    white-space: normal;
   }
 }
 /* ************Call Form*************** */
