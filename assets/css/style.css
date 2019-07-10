@@ -5375,7 +5375,7 @@ h3.f-head {
   position: absolute;
   height: 100%;
   width: 100%;
-  right: 0;
+  right: -15%;
   top: 0;
   background: url('../img/white-overlay.png') no-repeat;
 }
@@ -5728,6 +5728,9 @@ iframe {
   margin-bottom: 58px;
   margin-top: 10px;
   color: #333333;
+}
+.img-wrap {
+  height: 118px;
 }
 .diagram-wrapper img {
   width: 100%;
