@@ -5380,8 +5380,8 @@ h3.f-head {
   content: "";
   position: absolute;
   height: 100%;
-  width: 100%;
-  right: -15%;
+  width: 70%;
+  right: 0;
   top: 0;
   background: url('../img/white-overlay.png') no-repeat;
 }
