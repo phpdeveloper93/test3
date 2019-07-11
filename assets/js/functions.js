@@ -19,14 +19,14 @@
     }
       siteMenu();
       
-    function siteSlider(){
-        var $mainslider   = $('.main-slider'),
+    var $mainslider   = $('.main-slider'),
             $bottomslider = $('.bottom-slider'),  
             $current      = $('.current-number'),
             $carousel     = $('.carousel'),
             $team         = $('.carousel-team');
         
-        $mainslider.slick({
+      
+            $mainslider.slick({
             arrows: false,                      
             speed: 700,
             fade: true,
@@ -35,6 +35,7 @@
             useTransform: false,
             infinite: false
         });
+        
         $bottomslider.slick({            
             dots: true,
             dotsClass: "custom-dots",
@@ -78,19 +79,10 @@
                 }
             }       
         ] 
-    });
-        /*you have to bind init event before slick's initialization (see demo) */
-        $bottomslider.on("init", (event, slick) => {
-          $current.text(`${slick.currentSlide + 1}`);              
-        });
-         
-        $bottomslider.on("afterChange", (event, slick, currentSlide) => {
-          $current.text(`${slick.currentSlide + 1}`);
-        });
-        
-    }
-siteSlider();
-      
+    });    
+    $mainslider.on('afterChange', function(event, slick, currentSlide){
+     $(".current-number").text(currentSlide + 1);
+  });    
     $(function(){
        $('.minimized').click(function(event) {
        var i_path = $(this).attr('src');

@@ -4372,17 +4372,17 @@ h3.f-head {
   -webkit-clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   height: 480px;
+  border: 1px solid #cb0e16;
 }
 .path .order-form {
   position: absolute;
-  top: 1px;
+  top: 0;
   background: #fff;
   -webkit-clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
-  height: 479px;
+  height: 478px;
   width: 100%;
   padding: 48px 21px 29px;
-  border: 1px solid #cb0e16;
 }
 .path p {
   color: #333333;
@@ -4482,8 +4482,8 @@ h3.f-head {
   }
 }
 @media (max-width: 450px) {
-  .form-shadow {
-    margin: 0 5%!important;
+  .order-translate {
+    margin: 0;
   }
   .order-translate h3 {
     margin: 20px 0;
@@ -4532,10 +4532,20 @@ h3.f-head {
   position: relative;
   margin: 0 5%;
 }
+.path-left {
+  position: relative;
+  background: #cb0e16;
+  -webkit-clip-path: polygon(0 46%, 0 0, 100% 0, 100% 100%, 0 100%, 0 60%, 2% 53%);
+  clip-path: polygon(0 46%, 0 0, 100% 0, 100% 100%, 0 100%, 0 60%, 2% 53%);
+  width: 100%;
+  height: 100%;
+  border: 1px solid #cb0e16;
+}
 .check-file-form {
+  position: relative;
+  left: 0;
   padding: 40px 30px;
   background: #fff;
-  border: 1px solid #cb0e16;
 }
 .check-file-form .btn-submit {
   margin-top: 0;
@@ -4598,6 +4608,12 @@ h3.f-head {
 .f-input-wrapper {
   line-height: 1;
   position: relative;
+  overflow: hidden;
+  height: 20px;
+  width: 150px;
+  color: #cb0e16;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .f-input-wrapper:after {
   position: absolute;
@@ -4612,28 +4628,22 @@ h3.f-head {
   width: 20px;
   color: #cb0e16;
 }
-.custom-file-input {
-  color: transparent;
-  width: 130px;
-  height: 20px;
+.f-input-wrapper input[type="file"] {
+  display: none;
 }
-.custom-file-input:before {
-  content: 'Загрузить файл';
-  color: #cb0e16;
-  display: inline-block;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
+.f-input-wrapper label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  font-weight: 400;
-  font-size: 14px;
 }
-.custom-file-input:active,
-.custom-file-input:focus {
-  outline: none;
-}
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
+.f-input-wrapper span {
+  color: #cb0e16;
+  font-size: 13px;
+  line-height: 1px;
 }
 @media (max-width: 992px) {
   .check-file .btn-submit {
@@ -4678,18 +4688,37 @@ h3.f-head {
     flex-basis: 160px;
   }
 }
+@media (max-width: 576px) {
+  .uppload-btns {
+    margin: 0;
+  }
+  .check-file {
+    margin: 0;
+  }
+  .path-left {
+    position: relative;
+    background: #cb0e16;
+    -webkit-clip-path: polygon(0 45%, 0 0, 100% 0, 100% 100%, 0 100%, 0 55%, 3% 50%);
+    clip-path: polygon(0 45%, 0 0, 100% 0, 100% 100%, 0 100%, 0 55%, 3% 50%);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #cb0e16;
+  }
+}
 .translation {
   position: relative;
   margin: 0 2%;
 }
+.translation .path {
+  border: 1px solid #cb0e16;
+}
 .translation .path .translation-form {
   position: relative;
-  top: 1px;
+  top: 0;
   -webkit-clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
-  height: 479px;
+  height: 478px;
   width: 100%;
-  border: 1px solid #cb0e16;
   background: #fff;
   padding: 48px 21px 29px;
 }
@@ -4711,23 +4740,28 @@ h3.f-head {
     margin: 0 10%;
   }
 }
+@media (max-width: 576px) {
+  .translation {
+    margin: 0;
+  }
+}
 .path {
   position: relative;
   background: #cb0e16;
   -webkit-clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   height: 480px;
+  border: 1px solid #cb0e16;
 }
 .path .ask-form {
   position: absolute;
-  top: 1px;
+  top: 0;
   background: #fff;
   -webkit-clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
-  height: 479px;
+  height: 478px;
   width: 100%;
   padding: 48px 21px 29px;
-  border: 1px solid #cb0e16;
 }
 .path p {
   color: #333333;
@@ -5693,6 +5727,9 @@ iframe {
     font-size: 3em;
     padding-right: 25px;
   }
+  .bottom-block {
+    padding: 50px 0 40px;
+  }
 }
 .analyze {
   padding: 60px 0;
@@ -5735,8 +5772,23 @@ iframe {
   margin-top: 10px;
   color: #333333;
 }
-.img-wrap {
+.img-wrap-buro {
   height: 118px;
+  background: url('../img/buro.png') no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.img-wrap-lg {
+  height: 118px;
+  background: url('../img/lg.png') no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.img-wrap-ardo {
+  height: 118px;
+  background: url('../img/ardo.png') no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 .diagram-wrapper img {
   width: 100%;
@@ -5786,10 +5838,16 @@ iframe {
   display: flex;
   line-height: 0;
 }
+.img-row .card-large {
+  overflow: hidden;
+}
 .img-row .card-large img {
   width: 100%;
 }
 .img-row .card-small img {
+  width: 100%;
+}
+.lg-col img {
   width: 100%;
 }
 .img-col {
@@ -5820,6 +5878,7 @@ iframe {
   opacity: 0;
 }
 .card .hover-text p {
+  max-width: 100%;
   line-height: 1.5;
   font-weight: 300;
   font-size: 0.99em;
@@ -5867,10 +5926,6 @@ iframe {
   .img-row .card-large {
     width: 100%;
   }
-  .img-row .card-small {
-    width: 100%;
-    overflow: hidden;
-  }
   .img-row .card-small img {
     width: 100%;
   }
@@ -5881,12 +5936,136 @@ iframe {
     flex-direction: row;
   }
   .lg-col {
-    overflow: hidden;
     width: 100%;
-    height: 230px;
+  }
+  .lg-col img {
+    width: 100%;
   }
   .gd {
-    height: 230px;
+    width: 100%;
+  }
+  .gd img {
+    width: 100%;
+  }
+  .hover-text {
+    font-size: 0.6em;
+    padding: 0 1%;
+  }
+  .hover-text p {
+    line-height: 0.2;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .card {
+    position: relative;
+  }
+  .card .hover-text {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 8px 10px 20px;
+    width: 100%;
+    height: 100%;
+    background: #cb0e16;
+    background: rgba(203, 14, 22, 0.9);
+    opacity: 0;
+  }
+  .card .hover-text p {
+    max-width: 100%;
+    line-height: 1.1;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: #fff;
+  }
+  .card .hover-text:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+  .img-row {
+    width: 100%;
+  }
+  .card-small {
+    max-width: 33%;
+  }
+  .card-small img {
+    width: 100%;
+    height: 100%;
+  }
+  .card-large {
+    max-width: 66%;
+  }
+  .card-large img {
+    width: 100%;
+    height: 100%;
+  }
+  .img-col {
+    width: 33%;
+  }
+  .img-col .card-large,
+  .img-col .card-small {
+    max-width: 100%!important;
+  }
+}
+.lg-col img {
+  height: 100%;
+}
+.gd img {
+  height: 100%;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 768px) {
+  .img-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .card-large {
+    max-width: 100%;
+  }
+  .card-small {
+    width: 50%;
+  }
+  .img-col {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .gd {
+    min-width: 100%!important;
+  }
+  .lg-col {
+    min-width: 100%!important;
+  }
+  .lg-col .card-large {
+    width: 100%;
+  }
+  .lg-col .card-large img {
+    width: 100%;
+    height: 100%;
+  }
+  .hover-text {
+    padding: 10px 8px 10px 20px;
+  }
+  .hover-text p {
+    max-width: 100%;
+    line-height: 1.1;
+    font-size: 1.2em !important;
   }
 }
 .heading-rc h2 {

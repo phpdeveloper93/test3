@@ -13,16 +13,16 @@ h3.f-head {
     position: relative;	
     background: @accent;    
     clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%); 
-    height: 480px;    
+    height: 480px; 
+    border: 1px solid @accent;
     .order-form {        
         position: absolute;
-        top: 1px;       
+        top: 0;       
         background: #fff;        
         clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
-        height: 479px;
+        height: 478px;
         width: 100%;
-        padding: 48px 21px 29px; 
-        border: 1px solid @accent;
+        padding: 48px 21px 29px;       
     }    
     p {
         color: @font-light;
@@ -112,17 +112,15 @@ h3.f-head {
         margin: 0 10%;         
     }
 } 
-@media(max-width:450px){ 
-    .form-shadow {        
-        margin: 0 5%!important;
-    }
+@media(max-width:450px){     
     .order-translate {        
         h3 {
             margin: 20px 0;
             font-size: 1em;
             font-weight: 300;
             color: @accent;
-        }        
+        } 
+        margin: 0;
     }
     .order-form {
         p {
@@ -170,10 +168,19 @@ h3.f-head {
 .check-file {    
 	.order-translate    
 }
-.check-file-form {	
+.path-left {
+	position: relative;	
+    background: @accent;    
+    clip-path: polygon(0 46%, 0 0, 100% 0, 100% 100%, 0 100%, 0 60%, 2% 53%); 
+    width: 100%;     
+    height: 100%;
+    border: 1px solid @accent;
+}
+.check-file-form {    
+    position: relative;
+    left: 0;
     padding: 40px 30px; 
-    background: #fff; 
-    border: 1px solid @accent;  
+    background: #fff;     
     .btn-submit {
         margin-top: 0;
     }
@@ -183,7 +190,7 @@ h3.f-head {
     justify-content: space-between;
 }
 .form-text {
-    flex-basis: 370px;
+    flex-basis: 370px;    
     h4 {
         font-weight: 300;
         font-size: 1.222em;//22px
@@ -222,7 +229,13 @@ h3.f-head {
 }
 .f-input-wrapper {
 	line-height: 1;
-    position: relative;
+    position: relative;    
+    overflow: hidden;  
+    height: 20px;
+    width: 150px;
+    color: @accent;
+    text-align: center;
+    margin-bottom: 15px;
     &:after {
         position: absolute;
         top: 0;
@@ -236,28 +249,23 @@ h3.f-head {
         width: 20px;
         color: @accent;
     }
-}
-.custom-file-input {
-  color: transparent;
-    width: 130px;
-    height: 20px;
-    &:before {
-        content: 'Загрузить файл';
+    input[type="file"] {
+        display: none;
+    }
+    label {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    span {
         color: @accent;
-        display: inline-block;        
-        outline: none;
-        white-space: nowrap;
-        -webkit-user-select: none;
-        cursor: pointer;        
-        font-weight: 400;
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 1px;
     }
-    &:active, &:focus {
-        outline: none;
-    }
-}
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
 }
 @media(max-width:992px){
     .check-file {
@@ -295,20 +303,36 @@ h3.f-head {
         flex-basis: 160px;
     }
 }
+@media(max-width:576px){
+    .uppload-btns {
+	    margin: 0;
+    }
+    .check-file {
+	    margin: 0;
+    }
+    .path-left {
+	    position: relative;	
+        background: @accent;    
+        clip-path: polygon(0 45%, 0 0, 100% 0, 100% 100%, 0 100%, 0 55%, 3% 50%); 
+        width: 100%;     
+        height: 100%;
+        border: 1px solid @accent;
+    }
+}
 //------- TRANSLATION FORM ----------------
 .translation {
 	position: relative; 
     margin: 0 2%;
     .path {
+        border: 1px solid @accent;
         .translation-form { 
             position: relative;
-            top: 1px;       
+            top: 0;       
             background: #fff;        
             clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
-            height: 479px;
+            height: 478px;
             width: 100%;
-            padding: 48px 21px 29px; 
-            border: 1px solid @accent;
+            padding: 48px 21px 29px;            
             h3.f-head {
                 margin-bottom: 82px;
             }
@@ -328,21 +352,26 @@ h3.f-head {
         margin: 0 10%;         
     }
 } 
+@media(max-width:576px){
+    .translation {
+	    margin: 0;
+    }
+}
 //question form
 .path {    
     position: relative;	
     background: @accent;    
     clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%); 
-    height: 480px;    
+    height: 480px; 
+    border: 1px solid @accent;
     .ask-form {        
         position: absolute;
-        top: 1px;       
+        top: 0;       
         background: #fff;        
         clip-path: polygon(0 0, 46% 0, 50% 3%, 54% 0, 100% 0, 100% 100%, 0 100%);
-        height: 479px;
+        height: 478px;
         width: 100%;
-        padding: 48px 21px 29px; 
-        border: 1px solid @accent;
+        padding: 48px 21px 29px;        
     }    
     p {
         color: @font-light;

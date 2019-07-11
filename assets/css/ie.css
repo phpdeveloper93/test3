@@ -1,0 +1,132 @@
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;  
+}
+.img-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 0;
+}
+.img-row .card-large {
+  overflow: hidden;
+}
+.img-row .card-large img {
+  width: 100%;
+}
+.img-row .card-small img {
+  width: 100%;
+}
+.lg-col img {
+  width: 100%;
+}
+.img-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.card {
+  position: relative;
+}
+.card .hover-text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 8px 0 20px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  /*background: rgba(203, 14, 22, 0.9);*/
+  opacity: 0;
+}
+.card .hover-text p {
+  max-width: 100%;
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 0.99em;
+  color: #fff;
+}
+.card .hover-text:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+@media (max-width: 1170px) {
+  .hover-text {
+    font-size: 0.9em;
+  }
+  .hover-text p {
+    line-height: 1.2;
+  }
+}
+@media (max-width: 992px) {
+  .right-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .hover-text {
+    font-size: 0.7em;
+  }
+  .hover-text p {
+    line-height: 1.2;
+  }
+  .right-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .img-row {
+    line-height: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .img-row .card-large {
+    width: 100%;
+  }
+  .img-row .card-small img {
+    width: 100%;
+  }
+  .img-col {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .lg-col {
+    width: 100%;
+  }
+  .lg-col img {
+    width: 100%;
+  }
+  .gd {
+    width: 100%;
+  }
+  .gd img {
+    width: 100%;
+  }
+  .hover-text {
+    font-size: 0.6em;
+    padding: 0 1%;
+  }
+  .hover-text p {
+    line-height: 0.2;
+  }
+}
