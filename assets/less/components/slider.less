@@ -76,13 +76,19 @@
     .bottom-slide-item {
         display: flex!important;
         align-items: center;
-        padding: 15px 0;
+        padding: 15px 10px;
+        overflow: hidden;
         span, p {
             padding-bottom: 0!important;
-            margin: 0;
+            margin: 0;           
+        }
+        span {
+            max-width: 20%;
+            margin-left: 10px;
         }
         p {
             margin-left: 15px;
+            max-width: 80%;
         }
     }
     .slick-slider {
